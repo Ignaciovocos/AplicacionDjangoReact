@@ -6,7 +6,7 @@
 
 -Creamos el dockerfile. Desde node.js y declaramos la imagen desde nginx alpine la cual es una version más ligera.
 
--Le agregue al front una imagen y un titulo para que podamos ver que efectivamente se trata de nuestro index.html
+-Le agregue al front una imagen y un titulo para que podamos ver que efectivamente se trata de nuestro index.html.
 
 
 

@@ -4,7 +4,7 @@
 
 Recordar tener instalado docker y dockercompose.
 
-Hay dos formas distintas , una manual y otra bastante automatizada, la manual consiste en ingresar a la carpeta "backend" como así también a la carpeta "frontend" por separado en dos entornos de visual studio distintos, abrir la terminal, situarnos donde se encuentra nuestro archivo dockerfile y buildear la imagen a traves de sudo docker build -t backend . hacemos lo mismo en nuestra carpeta de frontend sudo docker build -t frontend . , de esta forma creamos las imagenes de ambos.
+Hay dos formas distintas , una manual y otra bastante automatizada, la manual consiste en ingresar a la carpeta "backend" como así también a la carpeta "frontend" por separado en dos entornos de visual studio distintos, abrir la terminal, situarnos donde se encuentra nuestro archivo dockerfile y buildear la imagen a traves de "sudo docker build -t backend . " hacemos lo mismo en nuestra carpeta de frontend "sudo docker build -t frontend . ", de esta forma creamos las imagenes de ambos.
 
 * verificamos que se hayan creado correctamente con el comando "sudo docker images".
 
@@ -23,7 +23,7 @@ A partir de allí podemos ingresar al local host 3000 para el front como asi tam
 
 La otra forma más automatizada consiste en crear en la carpeta del "deploy" por ejemplo un archivo .sh que lo que hace es crear una secuencia de comandos de bash shell para que pueda hacer el paso "manual" indicado arriba de forma automatica y ahorrarnos tiempo. 
 
-Ya que en ese archivo .sh le indicamos donde se encuentra el archivo dockerfile del back como asi tambien el del front, levanta la imagen y luego una vez que tiene creadas ambas imagenes que se ubique dentro del directorio del docker-compose y lo levante con "up". Para poder ejecutarlo tenemos que abrir la terminal y encontrarnos ubicados dentro de la carpeta donde se encuentra el .sh en mi caso ./deploy ingresando con "cd deploy" ya allí ejecutamos el comando "chmod +x init.sh" asi le damos permiso primero al ordenador. Luego " sudo ./init.sh" lo cual va a ejecutar definitivamente el .sh buildeandonos ambas imagenes ( front y back  ) y una vez finalizado va a correr ambos.
+Ya que en ese archivo .sh le indicamos donde se encuentra el archivo dockerfile del back como asi tambien el del front, levanta la imagen y luego una vez que tiene creadas ambas imagenes que se ubique dentro del directorio del docker-compose y lo levante con "up". Para poder ejecutarlo tenemos que abrir la terminal y encontrarnos ubicados dentro de la carpeta donde se encuentra el .sh en mi caso ./deploy ingresando con "cd deploy" ya allí ejecutamos el comando "chmod +x init.sh" asi le damos permiso primero al ordenador. Luego "sudo ./init.sh" lo cual va a ejecutar definitivamente el .sh buildeandonos ambas imagenes ( front y back  ) y una vez finalizado va a correr ambos.
 
 * Luego podemos ingresar al local host de la misma forma que indique arriba con los distintos puertos. 8000/ 3000.
 
